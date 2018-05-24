@@ -1,0 +1,27 @@
+/**
+ * Created By: Enki Probo S.
+ * Level: Easy
+ * Description:
+ *   
+ **/
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n, k;
+  cin >> n >> k;
+  int ar[n];
+  for (int i = 0; i < n; i++) {
+    cin >> ar[i];
+  }
+
+  int counter = 0;
+  for (int i = 0; i < n-1; i++) {
+    for (int j = i+1; j < n; j++) {
+      if ((ar[i]+ar[j])%k == 0) {
+        counter += 1;
+      }
+    }
+  }
+  cout << counter;
+}
